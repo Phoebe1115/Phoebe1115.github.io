@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Phoebe Claire Hermionie M. Gation</h1>
+</header>
+
+<div class="main-container">
+    <nav>
+        <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="subjects_taken.html">Subjects Taken</a></li>
+            <li><a href="currently_enrolled.html">Enrolled Subjects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="favorites.html">My Favorites</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Gallery</h2>
+        <div class="carousel">
+            <div class="carousel-images" id="carousel-images">
+                <img src="clyde.jpeg" alt="Image 1">
+                <img src="aphro.jpeg" alt="Image 2">
+                <img src="vash.jpeg" alt="Image 3">
+                <img src="joyce.jpeg" alt="Image 4">
+                <img src="mirror.jpeg" alt="Image 5">
+                <img src="camera.jpeg" alt="Image 6">
+                <img src="family.jpeg" alt="Image 7">
+                <img src="cypher.jpeg" alt="Image 8">
+                <img src="thea.jpeg" alt="Image 9">
+                <img src="kim.jpeg" alt="Image 10">
+            </div>
+            <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 - 2024 ITP4 | All Rights Reserved</p>
+</footer>
+
+<script>
+    let currentSlide = 0;
+
+    function changeSlide(direction) {
+        const images = document.querySelectorAll('#carousel-images img');
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = images.length - 1;
+        if (currentSlide >= images.length) currentSlide = 0;
+        const offset = -currentSlide * 100; // Move the carousel
+        document.getElementById('carousel-images').style.transform = `translateX(${offset}%)`;
+    }
+</script>
+
+</body>
+</html>

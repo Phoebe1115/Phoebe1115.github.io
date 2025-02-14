@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoebe Claire Hermionie M. Gation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #003366; /* Navy Blue */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #002147;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+
+        .main-container {
+            display: flex;
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        nav {
+            width: 200px;
+            background-color: #002147;
+            padding: 20px;
+            height: 100vh;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 50px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 20px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #1abc9c;
+            border-radius: 5px;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #002147;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-text {
+            flex: 1;
+            max-width: 60%;
+            padding-right: 20px;
+        }
+
+        .about-content img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            max-width: 100%;
+            margin-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #002147;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #002147;
+            color: white;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Phoebe Claire Hermionie M. Gation</h1>
+</header>
+
+<!-- Main Container with Sidebar and Content -->
+<div class="main-container">
+
+    <!-- Left Sidebar Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#" onclick="showSection('subjects_taken')">Subjects Taken</a></li>
+            <li><a href="#" onclick="showSection('currently_enrolled')">Enrolled Subjects</a></li>
+            <li><a href="#" onclick="showSection('gallery')">Gallery</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact Me</a></li>
+            <li><a href="#" onclick="showSection('favorites')">My Favorites</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Area -->
+    <div class="content">
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>PHOEBE CLAIRE HERMIONIE M. GATION</h3>
+                    <img src="vp.jpeg" alt="Profile Picture">
+                    <p>I’m Hermione, an IT student driven by an insatiable curiosity for the world of technology and its endless possibilities. I approach life with a spirit of courage, always embracing the unknown with an open mind and a willingness to explore new horizons. My passion for learning fuels my pursuit of knowledge, and I believe that every challenge is an opportunity for growth. I am guided by a strong sense of purpose and an unwavering commitment to my goals, always seeking ways to not only improve myself but also contribute meaningfully to the world around me. With each new concept I learn, every problem I solve, and every project I take on, I strive to push the boundaries of what is possible and make a lasting impact.</p>
+
+                    <p><strong>Address:</strong> Calabayan, Ozamiz City</p>
+                    <p><strong>Date of Birth:</strong> 10-15-2004</p>
+                    <p><strong>Age:</strong> 20</p>
+                    <p><strong>Nationality:</strong> Filipino</p>
+                    <p><strong>Sex:</strong> Female</p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Subjects Taken Section -->
+        <section id="subjects_taken">
+            <h2>Subjects Taken</h2>
+            <table id="subjects-table">
+                <tr>
+                    <th>Subject Name</th>
+                    <th>Description</th>
+                    <th>Units</th>
+                </tr>
+                <tr><td>OC1</td><td>Orientation Course 1</td><td>3</td></tr>
+                <tr><td>CSIT1</td><td>Introduction To Computing</td><td>3</td></tr>
+                <tr><td>CSIT2</td><td>Fundamentals Of Programming / Computer Programming 1</td><td>3</td></tr>
+                <tr><td>NSTP11L</td><td>NSTP 1-Literacy Training Service (LTS)</td><td>3</td></tr>
+                <tr><td>PE1</td><td>Path Fit 1: Movement Competency Training</td><td>2</td></tr>
+                <tr><td>SOCSC1</td><td>Understanding The Self / Pag-Unawa Sa Sarili</td><td>3</td></tr>
+                <tr><td>ENGLA</td><td>Grammar And Speech Enhancement</td><td>3</td></tr>
+                <tr><td>CSIT 3</td><td>Intermediate Programming / Computer Programming 2</td><td>3</td></tr>
+                <tr><td>ITP 1</td><td>It Fundamentals</td><td>3</td></tr>
+                <tr><td>ITP 2</td><td>Discrete Mathematics</td><td>3</td></tr>
+                <tr><td>MATH 1</td><td>Mathematics In The Modern World</td><td>3</td></tr>
+                <tr><td>NSTP 12L</td><td>NSTP 2-Literacy Training Service II</td><td>3</td></tr>
+                <tr><td>PE 2</td><td>Path Fit 2: Fitness Training</td><td>2</td></tr>
+                <tr><td>EP 1S</td><td>English Proficiency - Start I</td><td>3</td></tr>
+                <tr><td>ITP 3</td><td>Networking 1 (Cisco 1: Networking Basics)</td><td>3</td></tr>
+                <tr><td>ITEL 1A</td><td>It Elective 1: Platform Technologies</td><td>3</td></tr>
+                <tr><td>ITEL 2A</td><td>It Elective 2: Object-Oriented Programming</td><td>3</td></tr>
+                <tr><td>HIST 1</td><td>Readings In Philippine History</td><td>3</td></tr>
+                <tr><td>SOC ECON 1</td><td>The Contemporary World</td><td>3</td></tr>
+                <tr><td>PE 3</td><td>Path Fit 3: Sports (Individual/Dual)</td><td>2</td></tr>
+                <tr><td>CSIT 4</td><td>Data Structures And Algorithms</td><td>3</td></tr>
+            </table>
+            <div class="pagination">
+                <button onclick="changePage(-1)">Prev</button>
+                <span id="page-info">1</span>
+                <button onclick="changePage(1)">Next</button>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="carousel">
+                <div class="carousel-images" id="carousel-images">
+                    <img src=" clyde.jpeg " alt="Image 1">
+                    <img src=" aphro.jpeg " alt="Image 2">
+                    <img src=" vash.jpeg " alt="Image 3">
+                    <img src =" joyce.jpeg " alt="Image 4">
+                    <img src=" mirror.jpeg " alt="Image 5">
+                    <img src=" camera.jpeg " alt="Image 6">
+                    <img src=" family.jpeg " alt="Image 7">
+                    <img src=" cypher.jpeg " alt="Image 8">
+                    <img src=" thea.jpeg " alt="Image 9">
+                    <img src=" kim.jpeg " alt="Image 10">
+                </div>
+                <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Enrolled Subjects Section -->
+        <section id="currently_enrolled">
+            <h2>Enrolled Subjects</h2>
+            <table>
+                <tr>
+                    <th>Schedule</th>
+                    <th> Subject Name</th>
+                    <th>Description</th>
+                    <th>Units</th>
+                </tr>
+                <tr>
+                    <td>Monday & Wednesday | 04:10 - 05:10 PM / 11:10 - 12:40 NN</td>
+                    <td>ITP4</td>
+                    <td>Integrative Programming</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Monday & Wednesday | 09:35 - 10:35 AM / 08:00 - 09:30 AM</td>
+                    <td>ITP5</td>
+                    <td>Networking 2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Monday & Wednesday | 11:10 AM - 12:10 NN / 01:00 - 02:30 PM</td>
+                    <td>ITP6</td>
+                    <td>Introduction to HCI</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Friday | 08:00 - 11:00 AM</td>
+                    <td>PHILO1</td>
+                    <td>Ethics</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Friday | 06:00 - 08:00 AM</td>
+                    <td>PE4</td>
+                    <td>Path Fit 4</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Monday & Wednesday | 02:35 - 04:05 PM</td>
+                    <td>COM1</td>
+                    <td>Purposive Communication</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Tuesday & Thursday | 03:05 - 04:05 PM / 04:10 - 05:40 PM</td>
+                    <td>CSIT5</td>
+                    <td>Information Management</td>
+                    <td>3</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <ul>
+                <li>Phone: (+63) 976 274 3468</li><br>
+                <li>Email: phoebe.gtn@gmail.com</li><br>
+                <li>Facebook Link: <a href="Hermione Gation" style="color: #1abc9c;">Hermione Gation</a></li>
+            </ul>
+        </section>
+
+        <!-- My Favorites Section -->
+        <section id="favorites">
+            <h2>My Favorites</h2>
+            <ul>
+                <li><strong>Animal:</strong> I love cats because they are affectionate companions.</li><br>
+                <li><strong>Color:</strong> My favorite color is blue as it symbolizes calmness and depth.</li><br>
+                <li><strong>Book:</strong> I enjoy reading "Harry Potter" because of its magical storytelling.</li><br>
+                <li><strong>Movie:</strong> "The book of life" is my favorite movie.</li><br>
+                <li><strong>Food:</strong> I love fries because it's my comfort food.</li><br>
+                <li><strong>Hobby:</strong> Writing is my favorite hobby because having a restless mind leads to being a writer.</li><br>
+                <li><strong>Music Genre:</strong> I listen to Lo-fi music because it helps me focus and relax but most of the time I listen to musicals.</li><br>
+                <li><strong>Sport:</strong> Volleyball is my go-to sport.</li <li><strong>Travel Destination:</strong> Japan is my dream travel destination for its culture and technology.</li><br>
+                <li><strong>Season:</strong> I love winter because of the cozy atmosphere and festive vibes (I just really love the cold).</li><br>
+            </ul>
+        </section>
+    </div> <!-- End Content Area -->
+</div> <!-- End Main Container -->
+
+<footer>
+    <p>&copy; 2023 - 2024 ITP4 | All Rights Reserved</p>
+</footer>
+
+<script>
+    let currentPage = 1;
+    const subjectsPerPage = 7; // Number of subjects per page
+    const totalSubjects = 20; // Total number of subjects
+    const totalPages = Math.ceil(totalSubjects / subjectsPerPage);
+    let currentSlide = 0;
+
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach((section) => section.style.display = 'none');
+        const activeSection = document.getElementById(sectionId);
+        activeSection.style.display = 'block';
+    }
+
+    function changePage(direction) {
+        currentPage += direction;
+        if (currentPage < 1) currentPage = 1;
+        if (currentPage > totalPages) currentPage = totalPages;
+        document.getElementById('page-info').innerText = currentPage;
+        updateSubjectsTable();
+    }
+
+    function updateSubjectsTable() {
+        const subjectsTable = document.getElementById('subjects-table');
+        const rows = subjectsTable.querySelectorAll('tr:not(:first-child)');
+        rows.forEach((row, index) => {
+            row.style.display = (index >= (currentPage - 1) * subjectsPerPage && index < currentPage * subjectsPerPage) ? '' : 'none';
+        });
+    }
+
+    function changeSlide(direction) {
+        const images = document.querySelectorAll('#carousel-images img');
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = images.length - 1;
+        if (currentSlide >= images.length) currentSlide = 0;
+        const offset = -currentSlide * 100; // Move the carousel
+        document.getElementById('carousel-images').style.transform = `translateX(${offset}%)`;
+    }
+
+    // Show 'About Me' section by default
+    showSection('about');
+    updateSubjectsTable(); // Initialize subjects table display
+</script>
+
+</body>
+</html>
