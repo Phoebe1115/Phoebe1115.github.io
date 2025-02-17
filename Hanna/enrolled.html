@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrolled</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+</head>
+<body>
+    <div class="header">Hanna Thea T. Geno</div>
+    <div class="container">
+        <div class="sidebar">
+            <button onclick="showContent('about')">About Me</button>
+            <button onclick="showContent('subjects')">Subject Taken</button>
+            <button onclick="showContent('enrolled')">Subject Currently Enrolled</button>
+            <button onclick="showContent('contact')">Contact Me</button>
+            <button onclick="showContent('favorites')">My Favorites</button>
+<button onclick="showContent('gallery')">Gallery</button>
+        </div>
+        <div class="content" id="main-content">
+            <h2>Enrolled Subjects</h2>
+        <table>
+                <tr>
+                    <th>Schedule</th>
+                    <th>Subject Name</th>
+                    <th>Description</th>
+                    <th>Units</th>
+               </tr>
+               <tr><td>Mon & Wed / (04100510P / 11101240N)</td><td>ITP4</td><td>Integrative Programming</td><td>3</td></tr>
+               <tr><td>Mon & Wed / (09351035A / 08000930A)</td><td>ITP5</td><td>Networking 2</td><td>3</td></tr>
+               <tr><td>Mon & Wed / (11101210N / 01000230P)</td><td>ITP6</td><td>Introduction to HCI</td><td>3</td></tr>
+               <tr><td>Fri / 08001100A</td><td>PHILO1</td><td>Ethics</td><td>3</td></tr>
+               <tr><td>Fri / 06000800A</td><td>PE4</td><td>Path Fit 4</td><td>2</td></tr>
+               <tr><td>Mon & Wed / 02350405P</td><td>COM1</td><td>Purposive Communication</td><td>3</td></tr>
+               <tr><td>Tue & Thu / (03050405P / 04100540P)</td><td>CSIT5</td><td>Information Management</td><td>3</td></tr>
+        </table>
+            <!-- Content will be loaded dynamically -->
+        </div>
+    </div>
+    <div class="footer">&copy; 2023 - 2024 ITP4 | All Rights Reserved</div>
+
+    <script src="script.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>

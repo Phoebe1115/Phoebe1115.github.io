@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+</head>
+<body>
+    <div class="header">Hanna Thea T. Geno</div>
+    <div class="container">
+        <div class="sidebar">
+            <button onclick="showContent('about')">About Me</button>
+            <button onclick="showContent('subjects')">Subject Taken</button>
+            <button onclick="showContent('enrolled')">Subject Currently Enrolled</button>
+            <button onclick="showContent('contact')">Contact Me</button>
+            <button onclick="showContent('favorites')">My Favorites</button>
+<button onclick="showContent('gallery')">Gallery</button>
+        </div>
+
+        <div class="content" id="main-content">
+              <h2>Gallery</h2>
+                    <div class="carousel" style="margin-top: 10px;"> 
+                        <div class="carousel-images" id="carousel-images">
+                            <img src="a.jpg"  class="active">
+                            <img src="m.jpg" >
+                            <img src="p.jpg" >
+                            <img src="d.jpg" >
+                            <img src="e.jpg" >
+                            <img src="f.jpg" >
+                            <img src="mn.jpg">
+                            <img src="h.jpg" >
+                            <img src="k.jpg" >
+                            <img src="i.jpg" >
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-top: 10px;">
+                            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                        
+                </div> 
+            </div>
+        </div> 
+    </div> 
+
+    <div class="footer">&copy; 2023 - 2024 ITP4 | All Rights Reserved</div>
+
+    <script src="script.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>	
