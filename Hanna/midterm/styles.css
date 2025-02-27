@@ -1,0 +1,197 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-size: 1.1em;
+}
+
+.navbar {
+background-color: #ffffff;
+color: white;
+padding: 11px 0;
+position: fixed; 
+top: 0; 
+width: 100%; 
+z-index: 2; 
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+margin: 0; 
+
+}
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #3d6e52;
+    font-size: 1em;
+    font-weight: bold; 
+}
+#home {
+position: relative;
+background-image: url('a.png'); 
+background-size: cover; 
+background-position: center; 
+height: 730px; 
+color: white;
+text-align: center;
+padding-top: 100px; 
+width: 100%; 
+margin: 0; 
+box-sizing: border-box; 
+
+}
+.header-description {
+    position: relative;
+    z-index: 2; 
+    font-size: 1.2em; 
+    line-height: 1.5; 
+    margin-top: 10px; 
+    color: #ffffff; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); 
+}
+#home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+h1 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding-top: 200px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 3em;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    position: relative;
+    max-width: 80%; 
+    margin: auto; 
+    overflow: hidden;
+}
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: center; 
+}
+.carousel-images img {
+    width: 80%;
+    height: 50%;
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+.prev {
+    left: 10px;
+    background-color:  #092501;
+}
+.next {
+    right: 10px;
+    background-color:  #092501;
+}
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:  #092501;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.pagination button:hover {
+    background-color: #092501;
+}
+
+#about p, #history p, #contact p, #attractions p, #events p,  #gallery p {
+    font-size: 0.85em;
+    line-height: 1.7;
+}
+
+#about .image-container {
+    display: flex;
+    justify-content: space-between;
+}
+#about img {
+    width: 49.2%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.event-slide {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.event-slide.active {
+    display: flex; 
+}
+.event-description {
+    text-align: center;
+    margin-top:  10px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+#contact input, 
+#contact textarea {
+    font-family: 'Times New Roman', Times, serif; 
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#contact button {
+    font-family: 'Times New Roman', Times, serif; 
+    padding: 10px;
+    background-color: #092501;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#contact button:hover {
+    background-color: #0a3d00;
+}
+
+footer {
+    background-color: #092501;
+    color: white;
+    text-align: center;
+    padding: 3px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
