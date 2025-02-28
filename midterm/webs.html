@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Must-Go Places in El Nido, Palawan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <!-- Start Page -->
+  <div id="start-page">
+    <div class="welcome-message">
+      <h1>Welcome to El Nido, Palawan</h1>
+      <button id="start-btn" onclick="startTour()">Start</button>
+    </div>
+  </div>
+
+  <!-- Navigation Menu (hidden until Start is clicked) -->
+  <div id="top-bar" class="hidden">
+    <div class="nav-buttons">
+      <button onclick="showHome()">Must-Visit-Places</button>
+      <button onclick="showHistoryPage()">History of the Place</button>
+      <button onclick="showContact()">Contact</button>
+      <button onclick="showMorePhotos()">More Photos</button>
+      <button onclick="showAdventures()">Adventures</button>
+    </div>
+  </div>
+
+  <!-- Frame Container (holds all main content) -->
+  <div id="frame" class="hidden">
+    <!-- Main Content -->
+    <div id="main-content">
+      <div class="place-selection">
+        <h2>Must-Visit Places in El Nido</h2>
+        <div class="places-container">
+          <div class="place" onclick="showPlaceDetails(0)">
+            <img src="snake/snk.jpg" alt="Snake Island" />
+            <h3>Snake Island</h3>
+          </div>
+          <div class="place" onclick="showPlaceDetails(1)">
+            <img src="secret lagoon/tt.jpg" alt="Secret Lagoon" />
+            <h3>Secret Lagoon</h3>
+          </div>
+          <div class="place" onclick="showPlaceDetails(2)">
+            <img src="small lagoon/sml.jpg" alt="Small Lagoon" />
+            <h3>Small Lagoon</h3>
+          </div>
+          <div class="place" onclick="showPlaceDetails(3)">
+            <img src="shimizu island/mizu.jpg" alt="Shimizu Island" />
+            <h3>Shimizu Island</h3>
+          </div>
+          <div class="place" onclick="showPlaceDetails(4)">
+            <img src="hidden/hid.jpg" alt="Hidden Beach" />
+            <h3>Hidden Beach</h3>
+          </div>
+          <div class="place" onclick="showPlaceDetails(5)">
+            <img src="nacpan/nac.jpg" alt="Nacpan Beach" />
+            <h3>Nacpan Beach</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- History Page -->
+    <div id="history" class="hidden">
+      <h2>The Beauty and History of El Nido</h2>
+      <p>
+        El Nido, Palawan, is a place where history, culture, and nature come together 
+        in a breathtaking harmony. This paradise, now famous for its crystal-clear 
+        waters and towering limestone cliffs, was once a quiet fishing village, home 
+        to indigenous Tagbanua people who have lived in the region for centuries. 
+        The town’s name, "El Nido," meaning "The Nest" in Spanish, comes from the 
+        swiftlet birds that make their nests in the caves and cliffs of the area—nests 
+        that were once harvested and prized for their use in the delicacy bird’s nest soup.
+      </p>
+      <p>
+        During the Spanish colonial period, El Nido remained a remote and untouched 
+        land, visited only occasionally by traders and explorers. Over time, as people 
+        discovered its rich marine biodiversity and stunning landscapes, it became a 
+        place of wonder for those seeking both adventure and tranquility. Fishermen and 
+        early settlers lived in harmony with nature, relying on the abundant sea life 
+        and lush forests for sustenance.
+      </p>
+      <p>
+        In the modern era, El Nido’s beauty could not remain a secret for long. 
+        Travelers from around the world came to witness its majestic limestone karsts, 
+        hidden lagoons, and stunning coral reefs. Despite its growth as a top tourist 
+        destination, El Nido has retained its charm, with strict conservation efforts 
+        ensuring that its natural wonders remain untouched for future generations. 
+        Today, it stands as both a historical and ecological treasure—a place where 
+        time slows down, and the beauty of nature tells a story older than any civilization.
+      </p>
+    </div>
+
+    <!-- Adventures Section -->
+    <div id="adventures" class="hidden">
+      <h2>Adventures in El Nido</h2>
+      <ul>
+        <li>Island Hopping – Explore the famous lagoons, hidden beaches, and stunning islands.</li>
+        <li>Snorkeling & Diving – Discover vibrant coral reefs and diverse marine life.</li>
+        <li>Kayaking – Paddle through the crystal-clear waters of Small and Big Lagoon.</li>
+        <li>Cliff Climbing – Hike up Taraw Cliff for a breathtaking view of El Nido.</li>
+        <li>Zip-lining – Experience a thrilling zip-line ride from Las Cabanas Beach.</li>
+        <li>Camping – Spend a night under the stars on a secluded island.</li>
+        <li>Caving – Explore the fascinating Cathedral and Cudugnon Caves.</li>
+        <li>Stand-Up Paddleboarding – Glide through the calm waters of Bacuit Bay.</li>
+        <li>Surfing – Catch waves at Duli Beach, one of El Nido’s hidden gems.</li>
+        <li>Sunset Watching – Relax and watch the golden sunset at Nacpan Beach.</li>
+        <li>Waterfall Trekking – Visit Nagkalit-Kalit Falls for a refreshing dip.</li>
+        <li>Fishing Trips – Try traditional fishing with locals in Bacuit Bay.</li>
+    </ul>
+    
+    </div>
+
+    <!-- Place Details Section -->
+    <div id="place-details" class="hidden">
+      <img id="place-img" src="" alt="Place Image" />
+      <h2 id="place-name"></h2>
+      <p id="place-history"></p>
+      <p id="place-how-to-get"></p>
+    </div>
+
+    <!-- More Photos Section -->
+    <div id="more-photos" class="hidden">
+      <h2>More Photos of El Nido</h2>
+      <div class="carousel">
+        <button class="carousel-button carousel-prev" onclick="prevImage()">&#10094;</button>
+        <div class="carousel-images" id="carousel-images">
+          <img src="5 random pics/r1.jpg" alt="Image 1" />
+          <img src="5 random pics/r2.jpg" alt="Image 2" />
+          <img src="5 random pics/r3.jpg" alt="Image 3" />
+          <img src="5 random pics/r4.jpg" alt="Image 4" />
+          <img src="5 random pics/r5.jpg" alt="Image 5" />
+          <img src="5 random pics/r6.jpg" alt="Image 6" />
+          <img src="5 random pics/r7.jpg" alt="Image 7" />
+          <img src="5 random pics/r8.jpg" alt="Image 8" />
+          <img src="5 random pics/r9.jpg" alt="Image 9" />
+          <img src="5 random pics/r10.jpg" alt="Image 1o" />
+        </div>
+        <button class="carousel-button carousel-next" onclick="nextImage()">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Contact Page -->
+    <section id="contact-page" class="hidden">
+      <h2 class="contact-heading">Start Your Journey</h2>
+      <div class="contact-container">
+        <!-- Left column: contact info -->
+        <div class="contact-info">
+          <h3>Contact or Visit Us</h3>
+          <p>
+            Experience the breathtaking beauty of El Nido, Palawan—where towering limestone cliffs, crystal-clear lagoons, and pristine white sand beaches await. Dive into vibrant coral reefs, explore hidden caves, and witness unforgettable sunsets in this tropical paradise. Contact us now to plan your dream getaway and discover why El Nido is the ultimate island escape!
+          </p>
+          <ul class="contact-details">
+            <li>2 El Nido, Palawan, Philippines</li>
+            <li>phoebe.gtn@email.com</li>
+            <li>+63 976 274 3468</li>
+          </ul>
+          <h4>Let's keep in touch!</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <!-- Right column: contact form -->
+        <div class="contact-form">
+          <form action="#" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="send-btn">SEND MESSAGE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>Hermione Gation ITP6|2025</p>
+  </footer>
+
+</body>
+</html>
